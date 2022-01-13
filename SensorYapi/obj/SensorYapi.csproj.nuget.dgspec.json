@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vir_t\\source\\repos\\SensorY\\SensorYapi\\SensorYapi.csproj": {}
+    "D:\\PPKE\\21_22_1\\dotnet\\ppkedotnetHW\\SensorYapi\\SensorYapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vir_t\\source\\repos\\SensorY\\SensorYapi\\SensorYapi.csproj": {
+    "D:\\PPKE\\21_22_1\\dotnet\\ppkedotnetHW\\SensorYapi\\SensorYapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vir_t\\source\\repos\\SensorY\\SensorYapi\\SensorYapi.csproj",
+        "projectUniqueName": "D:\\PPKE\\21_22_1\\dotnet\\ppkedotnetHW\\SensorYapi\\SensorYapi.csproj",
         "projectName": "SensorYapi",
-        "projectPath": "C:\\Users\\vir_t\\source\\repos\\SensorY\\SensorYapi\\SensorYapi.csproj",
+        "projectPath": "D:\\PPKE\\21_22_1\\dotnet\\ppkedotnetHW\\SensorYapi\\SensorYapi.csproj",
         "packagesPath": "C:\\Users\\vir_t\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vir_t\\source\\repos\\SensorY\\SensorYapi\\obj\\",
+        "outputPath": "D:\\PPKE\\21_22_1\\dotnet\\ppkedotnetHW\\SensorYapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Serilog": {
               "target": "Package",
               "version": "[2.10.0, )"

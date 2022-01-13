@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SensorYapi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SensorYapi.Models
+namespace SensorYapi.Services
 {
-    public class SensorClasterService
+    public class SensorClasterServiceInMemory //: ISensorClasterService
     {
         private List<Sensor> sensors = new List<Sensor>
         {
@@ -18,6 +19,7 @@ namespace SensorYapi.Models
                     LastValue= 100
                 }
         };
+        
         public Sensor CreateSensor(Sensor r)
         {
             r.Id = sensors.Max(x => x.Id) + 1;
@@ -35,7 +37,7 @@ namespace SensorYapi.Models
             return sensors.Where(predicate).ToList();
         }
 
-        public Sensor GetSensorById( int id)
+        public Sensor GetSensorById(int id)
         {
             return sensors.SingleOrDefault(x => x.Id == id);
         }
@@ -50,14 +52,14 @@ namespace SensorYapi.Models
             sensorToUpdate.Name = r.Name;
             sensorToUpdate.LastValue = r.LastValue;
             sensorToUpdate.Version = r.Version;
-            sensorToUpdate.Type=    r.Type;
+            sensorToUpdate.Type = r.Type;
 
             return true;
         }
 
         public bool DeleteSensor(int id)
         {
-            var n= sensors.RemoveAll(x => x.Id == id);
+            var n = sensors.RemoveAll(x => x.Id == id);
             return n == 1;
         }
     }
